@@ -24,6 +24,10 @@ namespace MiniPrism.Views
         {
             InitializeComponent();
             //view discovery
+            if (regionManager == null)
+            {
+                throw new ArgumentNullException(nameof(regionManager));
+            }
             regionManager.RegisterViewWithRegion(RegionNames.RegionA, typeof(ViewA));
         }
     }
